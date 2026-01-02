@@ -13,6 +13,7 @@ include device/oneplus/sm8750-common/BoardConfigCommon.mk
 DEVICE_PATH := device/oneplus/dodge
 
 # Assert
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/configs/board/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := OP5D0DL1,OP5D55L1
 
 # Display
@@ -22,9 +23,9 @@ TARGET_SCREEN_DENSITY := 640
 TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_DODGE_DTB=y
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
